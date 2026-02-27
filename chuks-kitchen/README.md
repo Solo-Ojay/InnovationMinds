@@ -83,7 +83,7 @@ This project is configured for Vercel using [vercel.json](vercel.json).
 
 1. Push this project to GitHub.
 2. In Vercel, click **Add New → Project**.
-3. Import the repository and set the **Root Directory** to `chuks-kitchen` (if your repo contains multiple folders).
+3. Import the repository and set the **Root Directory** to `chuks-kitchen`.
 4. Keep defaults:
     - **Build Command:** `npm run build`
     - **Output Directory:** `dist`
