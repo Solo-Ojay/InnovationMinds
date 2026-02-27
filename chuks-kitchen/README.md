@@ -121,6 +121,10 @@ vercel --prod
     - This repo now uses `npx vite build` to avoid PATH issues in CI.
     - If you still see it, clear Vercel build cache and redeploy.
 
+- **Build fails due to Node version / engine mismatch**
+    - This project requires Node `>=20.19.0`.
+    - In Vercel Project Settings → **Node.js Version**, select `20.x` or `22.x`, then redeploy.
+
 - **Assets missing or broken styles after deploy**
     - Clear cache and redeploy from Vercel (**Deployments → Redeploy → Use existing Build Cache: Off**).
 
