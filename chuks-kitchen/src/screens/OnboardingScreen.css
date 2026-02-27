@@ -1,0 +1,231 @@
+.onboarding-container {
+    display: flex;
+    width: 100vw;
+    min-height: calc(100vh - 350px);
+}
+
+.onboarding-container {
+    width: 100%;
+}
+
+.onboarding-left {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.onboarding-left img {
+    width: 720px;
+    height: 1024px;
+    object-fit: cover;
+    object-position: left center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.onboarding-right {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.onboarding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.onboarding-logo {
+    font-family: 'Brush Script MT', 'Dancing Script', cursive;
+    /* Approximation of the script font */
+    font-size: 32px;
+    color: #d97706;
+}
+
+.btn-outline-blue {
+    background: white;
+    border: 1px solid #1E88E5;
+    color: #1E88E5;
+    border-radius: 6px;
+    padding: 8px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-blue:hover {
+    background: #f0f7ff;
+}
+
+.onboarding-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.onboarding-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.onboarding-subtitle {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.onboarding-benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+    margin-bottom: 48px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #111;
+}
+
+.icon-wrapper {
+    background-color: #ffedd5;
+    /* Light orange background */
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper img {
+    width: 20px;
+    height: 20px;
+    /* Icon tint would be orange, but assuming image is already orange/suitable */
+}
+
+.onboarding-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn-primary-large {
+    background-color: #ff8a00;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-primary-large:hover {
+    background-color: #e77a00;
+}
+
+.btn-outline-blue-large {
+    background: white;
+    border: 1px solid #1E88E5;
+    color: #1E88E5;
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-outline-blue-large:hover {
+    background: #f0f7ff;
+}
+
+.onboarding-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 12px;
+    color: #6b7280;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 24px;
+}
+
+.onboarding-footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.onboarding-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .onboarding-container {
+        flex-direction: column;
+    }
+
+    .onboarding-left {
+        min-height: 300px;
+        flex: none;
+        height: 40vh;
+    }
+
+    .onboarding-right {
+        padding: 24px 16px;
+    }
+
+    .onboarding-header {
+        margin-bottom: 32px;
+    }
+
+    .onboarding-title {
+        font-size: 28px;
+    }
+
+    .onboarding-subtitle {
+        margin-bottom: 32px;
+    }
+
+    .onboarding-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .btn-primary-large,
+    .btn-outline-blue-large {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .onboarding-logo {
+        font-size: 24px;
+    }
+
+    .btn-outline-blue {
+        padding: 6px 16px;
+        font-size: 14px;
+    }
+}

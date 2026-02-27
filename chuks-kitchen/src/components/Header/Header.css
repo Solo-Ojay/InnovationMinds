@@ -1,0 +1,74 @@
+.ck-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ck-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 16px;
+}
+
+.ck-logo {
+  cursor: pointer;
+}
+
+.ck-logo-script {
+  font-family: "Brush Script MT", "Pacifico", cursive;
+  font-size: 24px;
+  color: #ff8a00;
+}
+
+.ck-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.ck-nav-link {
+  background: none;
+  border: none;
+  padding: 4px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555555;
+}
+
+.ck-nav-link-active {
+  color: #ff8a00;
+  border-bottom: 2px solid #ff8a00;
+}
+
+.ck-login-btn {
+  background-color: #ff8a00;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .ck-header-inner {
+    gap: 16px;
+  }
+
+  .ck-nav-list {
+    gap: 16px;
+    font-size: 13px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ck-login-btn {
+    padding-inline: 16px;
+  }
+}
+
+
