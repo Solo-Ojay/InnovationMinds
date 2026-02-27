@@ -73,6 +73,34 @@ You can then preview the built files using:
 npm run preview
 ```
 
+## ▲ Deploying to Vercel
+
+This project is configured for Vercel using [vercel.json](vercel.json).
+
+### Option 1: Deploy from Vercel Dashboard
+
+1. Push this project to GitHub.
+2. In Vercel, click **Add New → Project**.
+3. Import the repository and set the **Root Directory** to `chuks-kitchen` (if your repo contains multiple folders).
+4. Keep defaults:
+    - **Build Command:** `npm run build`
+    - **Output Directory:** `dist`
+5. Click **Deploy**.
+
+### Option 2: Deploy with Vercel CLI
+
+```bash
+npm i -g vercel
+cd chuks-kitchen
+vercel
+```
+
+For production deployment:
+
+```bash
+vercel --prod
+```
+
 ## 🔮 Future Enhancements
 
 While the frontend is fully fleshed out, future iterations of this project could include:
