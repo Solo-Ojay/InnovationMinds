@@ -103,40 +103,6 @@ For production deployment:
 vercel --prod
 ```
 
-### Troubleshooting
-
-- **Build fails with `Could not read package.json`**
-    - Run commands from the correct folder:
-    ```bash
-    cd chuks-kitchen
-    npm install
-    npm run build
-    ```
-
-- **Vercel deploy succeeds but opens a 404 on refresh/deep links**
-    - Ensure [vercel.json](vercel.json) exists with the SPA rewrite to `/index.html`.
-
-- **Wrong project root on Vercel**
-    - In Vercel Project Settings, set **Root Directory** to `chuks-kitchen`.
-
-- **`sh: line 1: vite: command not found`**
-    - This repo now uses `npx vite build` to avoid PATH issues in CI.
-    - If you still see it, clear Vercel build cache and redeploy.
-
-- **Build fails due to Node version / engine mismatch**
-    - This project requires Node `>=20.19.0`.
-    - In Vercel Project Settings → **Node.js Version**, select `20.x` or `22.x`, then redeploy.
-
-- **Assets missing or broken styles after deploy**
-    - Clear cache and redeploy from Vercel (**Deployments → Redeploy → Use existing Build Cache: Off**).
-
-- **Command not found: `vercel`**
-    - Install the CLI globally, then re-run deploy:
-    ```bash
-    npm i -g vercel
-    vercel --prod
-    ```
-
 ## 🔮 Future Enhancements
 
 While the frontend is fully fleshed out, future iterations of this project could include:
