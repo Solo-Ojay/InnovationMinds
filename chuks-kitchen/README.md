@@ -77,6 +77,8 @@ npm run preview
 
 This project is configured for Vercel using [vercel.json](vercel.json).
 
+**Live Demo:** https://chuks-kitchen-chi.vercel.app/
+
 ### Option 1: Deploy from Vercel Dashboard
 
 1. Push this project to GitHub.
