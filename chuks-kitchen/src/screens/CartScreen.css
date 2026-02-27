@@ -1,0 +1,196 @@
+/* CartScreen.css */
+
+.ck-cart {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: transparent;
+    /* Assuming the page shell has the #f5f5f7 background */
+}
+
+.ck-cart h1.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #111;
+}
+
+.ck-cart-items-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Optional subtle shadow */
+}
+
+/* We don't necessarily need the container if the items themselves have the white bg. Let's match the mockup exactly where each item has a white bg and border. */
+.ck-cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.ck-cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    gap: 24px;
+}
+
+.ck-cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.ck-cart-item-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+}
+
+.ck-cart-item-details {
+    flex: 1;
+}
+
+.ck-cart-item-details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 8px 0;
+}
+
+.ck-cart-item-details p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.ck-cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.ck-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ck-quantity-btn {
+    background-color: #f3f4f6;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #4b5563;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.ck-quantity-btn:hover {
+    background-color: #e5e7eb;
+}
+
+.ck-quantity-value {
+    font-size: 20px;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.ck-cart-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff8a00;
+    min-width: 90px;
+    text-align: right;
+}
+
+.ck-remove-btn {
+    background-color: #ff8a00;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.ck-remove-btn img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    /* Makes the generic close icon pure white */
+}
+
+.ck-remove-btn:hover {
+    background-color: #e77a00;
+    transform: scale(1.05);
+}
+
+.ck-link {
+    display: inline-flex;
+    align-items: center;
+    color: #3b82f6;
+    /* Blue link color */
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 16px;
+}
+
+.ck-link:hover {
+    text-decoration: underline;
+}
+
+.ck-cart-actions {
+    display: flex;
+    justify-content: flex-end;
+    /* Usually checkout buttons are on the right, but the mockup cuts off. Let's assume standard behavior */
+    margin-top: 40px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ck-cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ck-cart-item-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .ck-cart-item-actions {
+        width: 100%;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .ck-remove-btn {
+        margin-left: auto;
+    }
+}

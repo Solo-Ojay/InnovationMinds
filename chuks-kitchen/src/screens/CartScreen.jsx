@@ -3,6 +3,7 @@ import closeIcon from "../assets/cartScreen/icons/closeIcon.png";
 import jollofPlantain from "../assets/cartScreen/images/jollofRice&FriedChickenWithPlantain.png";
 import jollofEgusi from "../assets/cartScreen/images/jollofRice&FriedChickenEgusi.png";
 import jollofFruits from "../assets/cartScreen/images/jollofRice&FriedChickenFruits.png";
+import "./CartScreen.css";
 
 function CartScreen({ onCheckout }) {
   return (
@@ -53,12 +54,14 @@ function CartItem({ image, title, description, price }) {
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <article className="ck-cart-item card-surface">
+    <div className="ck-cart-item">
       <img src={image} alt={title} className="ck-cart-item-image" />
       <div className="ck-cart-item-content">
-        <h3 className="ck-card-title">{title}</h3>
-        <p className="ck-card-text">{description}</p>
-        <div className="ck-cart-item-footer">
+        <div className="ck-cart-item-details">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+        <div className="ck-cart-item-actions">
           <div className="ck-quantity-controls">
             <button
               type="button"
@@ -76,13 +79,13 @@ function CartItem({ image, title, description, price }) {
               +
             </button>
           </div>
-          <span className="ck-price">{price}</span>
+          <span className="ck-cart-price">{price}</span>
           <button type="button" className="ck-remove-btn" aria-label="Remove">
-            <img src={closeIcon} alt="" />
+            <img src={closeIcon} alt="Remove" />
           </button>
         </div>
       </div>
-    </article>
+    </div>
   );
 }
 

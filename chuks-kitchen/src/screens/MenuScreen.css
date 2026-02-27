@@ -1,0 +1,210 @@
+/* MenuScreen.css */
+
+.ck-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.ck-menu-hero {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: flex;
+    align-items: center;
+    min-height: 400px;
+    background-color: #333;
+    margin-bottom: 40px;
+}
+
+.ck-menu-hero>img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.ck-menu-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.ck-hero-overlay-content {
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.ck-hero-overlay-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.ck-hero-overlay-content p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Two-Column Layout */
+.ck-menu-layout {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+/* Sidebar */
+.ck-menu-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 24px;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 24px 20px 16px;
+    margin: 0;
+    color: #111;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ck-menu-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.ck-menu-nav-item {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.ck-menu-nav-item:hover {
+    background-color: #f9fafb;
+}
+
+.ck-menu-nav-item.active {
+    background-color: #ffedd5;
+    color: #111;
+    border-left-color: #f26b1c;
+}
+
+/* Main Content Area */
+.ck-menu-content {
+    flex: 1;
+}
+
+.ck-section-transparent {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 48px;
+}
+
+.menu-section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1a202c;
+}
+
+/* Add Button (+) */
+.ck-add-circle {
+    background-color: #ff8a00;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(255, 138, 0, 0.3);
+}
+
+.ck-add-circle:hover {
+    background-color: #e77a00;
+    transform: scale(1.05);
+}
+
+.ck-add-circle:active {
+    transform: scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .ck-menu-layout {
+        flex-direction: column;
+    }
+
+    .ck-menu-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 24px;
+    }
+
+    .ck-menu-nav {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 8px;
+    }
+
+    .ck-menu-nav-item {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 12px 16px;
+    }
+
+    .ck-menu-nav-item.active {
+        border-left-color: transparent;
+        border-bottom-color: #f26b1c;
+    }
+}
+
+@media (max-width: 768px) {
+    .ck-menu-hero {
+        min-height: 300px;
+    }
+
+    .ck-hero-overlay-content h1 {
+        font-size: 32px;
+    }
+
+    .ck-hero-overlay-content p {
+        font-size: 16px;
+    }
+}
