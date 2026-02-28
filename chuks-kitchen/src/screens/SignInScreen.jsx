@@ -84,7 +84,7 @@ function SignInScreen({ onContinue, onCreateAccount }) {
                 onCreateAccount?.();
               }}
             >
-              Cracte an account
+              Create an account
             </a>
           </p>
         </div>
